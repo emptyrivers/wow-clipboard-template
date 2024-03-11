@@ -118,7 +118,7 @@ end
 
 function MyAddOnClipBoardMixin:OnTextChanged_Intrinsic()
   if not self:TextIsClipBoardText() then
-    self:SetText(self.clipBoardText)
+    self:SetText(("\n%s\n"):format(self.clipBoardText))
     if not self:IsMultiLine() then
       self:ClearHistory()
     else
