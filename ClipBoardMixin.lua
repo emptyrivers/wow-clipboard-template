@@ -62,27 +62,28 @@ function MyAddOnClipBoardMixin:OnSetSpacing(callback, ...)
 end
 
 function MyAddOnClipBoardMixin:OnMouseDown_Intrinsic()
-	self:SetFocus();
-	self:TriggerEvent("OnMouseDown", self);
+  self:ClearFocus()
+	self:SetFocus()
+	self:TriggerEvent("OnMouseDown", self)
 end
 
 function MyAddOnClipBoardMixin:OnMouseUp_Intrinsic()
-	self:TriggerEvent("OnMouseUp", self);
+	self:TriggerEvent("OnMouseUp", self)
 end
 
 function MyAddOnClipBoardMixin:OnTabPressed_Intrinsic()
-	self:TriggerEvent("OnTabPressed", self);
+	self:TriggerEvent("OnTabPressed", self)
 end
 
 function MyAddOnClipBoardMixin:OnEditFocusGained_Intrinsic()
   self:HighlightClipBoardText()
-  self:TriggerEvent("OnEditFocusGained", self);
+  self:TriggerEvent("OnEditFocusGained", self)
 end
 
 function MyAddOnClipBoardMixin:OnEditFocusLost_Intrinsic()
-	self:ClearHighlightText();
+	self:ClearHighlightText()
 
-	self:TriggerEvent("OnEditFocusLost", self);
+	self:TriggerEvent("OnEditFocusLost", self)
 end
 
 function MyAddOnClipBoardMixin:OnCursorChanged_Intrinsic(x, y, width, height, context)
@@ -104,9 +105,9 @@ function MyAddOnClipBoardMixin:OnCursorChanged_Intrinsic(x, y, width, height, co
 end
 
 function MyAddOnClipBoardMixin:OnEscapePressed_Intrinsic()
-	self:ClearFocus();
+	self:ClearFocus()
 
-	self:TriggerEvent("OnEscapePressed", self);
+	self:TriggerEvent("OnEscapePressed", self)
 end
 
 function MyAddOnClipBoardMixin:OnArrowPressed_Intrinsic(key)
@@ -173,15 +174,15 @@ function MyAddOnClipBoardMixin:SetClipBoardText(text)
 end
 
 function MyAddOnClipBoardMixin:GetCursorOffset()
-	return self.cursorOffset or 0;
+	return self.cursorOffset or 0
 end
 
 function MyAddOnClipBoardMixin:GetCursorHeight()
-	return self.cursorHeight or 0;
+	return self.cursorHeight or 0
 end
 
 function MyAddOnClipBoardMixin:GetFontHeight()
-	return select(2, self:GetFont());
+	return select(2, self:GetFont())
 end
 
 function MyAddOnClipBoardMixin:GetClipBoardText()
