@@ -25,13 +25,6 @@
       <Frame parentKey="ScrollBox" setAllPoints="true" inherits="WowScrollBox">
         <Frames>
           <MyAddOnClipboard parentKey="ClipBoard" multiLine="true" autoFocus="false">
-            <!--
-              Workaround for either my stupidity, or a bug in ScrollBoxLinearView:
-              Linear view sets both topleft/topright points, but none of the bottom points,
-              which breaks the Rect if there isn't a height set, thus making the ClipBoard vanish
-              AFAICT setting the height here to anything fixes the problem without any visible side effects, so whatever
-            -->
-            <Size y="64"/>
             <KeyValues>
               <KeyValue key="scrollable" value="true" type="boolean"/>
             </KeyValues>

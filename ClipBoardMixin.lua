@@ -125,6 +125,8 @@ function MyAddOnClipBoardMixin:OnTextChanged_Intrinsic()
       self:SetCursorPosition(1)
     end
     self:HighlightClipBoardText()
+  else
+    self:TriggerEvent("OnTextChanged", self)
   end
 end
 
