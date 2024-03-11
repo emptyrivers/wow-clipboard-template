@@ -26,7 +26,7 @@ If you're a stickler for lint errors, then you'll need to extend the schema defi
 </Ui>
 ```
 
-...or (the 'better' idea) include it in root xsd file which serves as your schema, like this:
+...or (the 'better' idea) include it in a root xsd file which serves as your schema, like this:
 
 ```xml
 <xs:schema
