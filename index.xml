@@ -1,0 +1,16 @@
+<Ui
+  xmlns="http://www.blizzard.com/wow/ui/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ schema.xsd"
+>
+  <!--
+    * Clipboard is marked with CC0 1.0 Universal.
+    * To view a copy of this license, visit http://creativecommons.org/publicdomain/zero/1.0
+    *
+    * FYI, if you want to copy this template into your own addon, I would advise changing the names everywhere
+    * (e.g. ClipBoard -> MyAddOnClipBoard) to avoid conflicts with other addons,
+    * unless this is the 22nd century and Blizzard has finally made XML template libraries possible.
+   -->
+  <Include file="intrinsic.xml"/>
+  <Include file="templates.xml"/>
+</Ui>

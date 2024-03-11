@@ -1,0 +1,47 @@
+<Ui
+  xmlns="http://www.blizzard.com/wow/ui/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ schema.xsd"
+>
+  <!-- ScrollingClipBoardBox
+    * This is just a ClipBoard put inside a WowScrollBox
+    * Consume in exactly the same way you'd make a ScrollingEditBox,
+    * i.e. add a sibling EventFrame which inherits WowTrimScrollBar or whatever,
+    * and call ScrollUtil.RegisterScrollBoxWithScrollBar(...)
+    * & ScrollUtil.AddManagedScrollBarVisibilityBehavior(...) in OnLoad script
+    * (see SharedXML/ScrollUtil.lua for more info)
+  -->
+  <Include file="ScrollingClipBoardMixin.lua"/>
+  <Frame
+    name="MyAddOnScrollingClipBoardBoxTemplate"
+    mixin="MyAddOnScrollingClipBoardBoxMixin"
+    virtual="true"
+  >
+    <KeyValues>
+      <KeyValue key="fontName" value="GameFontHighlight" type="string"/>
+      <KeyValue key="defaultFontName" value="GameFontDisable" type="string"/>
+    </KeyValues>
+    <Frames>
+      <Frame parentKey="ScrollBox" setAllPoints="true" inherits="WowScrollBox">
+        <Frames>
+          <MyAddOnClipboard parentKey="ClipBoard" multiLine="true" autoFocus="false">
+            <!--
+              Workaround for either my stupidity, or a bug in ScrollBoxLinearView:
+              Linear view sets both topleft/topright points, but none of the bottom points,
+              which breaks the Rect if there isn't a height set, thus making the ClipBoard vanish
+              AFAICT setting the height here to anything fixes the problem without any visible side effects, so whatever
+            -->
+            <Size y="64"/>
+            <KeyValues>
+              <KeyValue key="scrollable" value="true" type="boolean"/>
+            </KeyValues>
+          </MyAddOnClipboard>
+        </Frames>
+      </Frame>
+    </Frames>
+    <Scripts>
+      <OnLoad method="OnLoad"/>
+      <OnMouseDown method="OnMouseDown"/>
+    </Scripts>
+  </Frame>
+</Ui>

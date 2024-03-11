@@ -1,0 +1,10 @@
+<!-- just <xs:include /> this into your own addon's xsd to get your linter to stop complaining :) -->
+<xs:schema
+  xmlns="http://www.blizzard.com/wow/ui/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ui="http://www.blizzard.com/wow/ui/"
+  targetNamespace="http://www.blizzard.com/wow/ui/"
+>
+  <xs:include  schemaLocation="https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/FrameXML/UI_shared.xsd" />
+  <xs:element name="MyAddOnClipboard" type="EditBoxType" substitutionGroup="ui:FrameRef"/>
+</xs:schema>

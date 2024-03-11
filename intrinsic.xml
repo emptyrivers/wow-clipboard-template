@@ -1,0 +1,35 @@
+<Ui
+  xmlns="http://www.blizzard.com/wow/ui/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ schema.xsd"
+>
+  <!-- ClipBoard
+    * A Clipboard is an EditBox whose contents cannot be changed by the user.
+    * It is generally useful as a means of producing text the user should copy & paste somewhere else.
+    * A Clipboard will actively prevent the user from changing their contents,
+    * & will not allow the user to select only part of the contents to copy.
+  -->
+  <Include file="ClipBoardMixin.lua"/>
+  <EditBox
+    name="MyAddOnClipboard"
+    intrinsic="true"
+    mixin="MyAddOnClipBoardMixin"
+    multiLine="true"
+  >
+    <KeyValues>
+      <KeyValue key="fontName" value="GameFontNormal" type="string" />
+      <KeyValue key="clipBoardText" value="" type="string" />
+    </KeyValues>
+    <Scripts>
+			<OnLoad method="OnLoad_Intrinsic"/>
+			<OnMouseDown method="OnMouseDown_Intrinsic"/>
+			<OnMouseUp method="OnMouseUp_Intrinsic"/>
+			<OnTabPressed method="OnTabPressed_Intrinsic"/>
+			<OnTextChanged method="OnTextChanged_Intrinsic"/>
+			<OnCursorChanged method="OnCursorChanged_Intrinsic"/>
+			<OnEscapePressed method="OnEscapePressed_Intrinsic"/>
+			<OnEditFocusGained method="OnEditFocusGained_Intrinsic"/>
+			<OnEditFocusLost method="OnEditFocusLost_Intrinsic"/>
+    </Scripts>
+  </EditBox>
+</Ui>
