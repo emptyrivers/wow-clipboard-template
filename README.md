@@ -2,6 +2,10 @@
 
 An attempt to make an xml template that can be imported like a library. This probably won't go anywhere, but it's worth a try!
 
+## Okay, but what's in here?
+
+Oh I'm glad you asked! There's an intrinsic that I'm calling a ClipBoard, which is basically an EditBox which the user copy from, but can't edit in any way, and also a ScrollingClipBoardBox, which serves as a drop-in replacement for ScrollingEditBox, so you can have a ClipBoard that scrolls!
+
 ## Installation
 
 To the extent possible, all of this code is public domain, so 'installing' really just means downloading the files & committing them directly. That being said...
