@@ -25,6 +25,12 @@ By far the most annoying thing about XML templates when it comes to libraries is
 
 So, if you're willing to go thru it manually, I've tried to make it easy for you: All "namespaceable" bits of this "library" are prefixed with MyAddOn (MyAddOnClipBoardMixin, etc). Find & replace them with whatever your actual addon name is & you should be good to go.
 
+I've provided a tiny script for your convenience (if you don't have grep & sed, it's not very convenient):
+
+```sh
+./fixmynames.sh MyAmazingAddOn # would replace MyAddOn with MyAmazingAddOn
+```
+
 ### Extend the Schema
 
 If you're a stickler for lint errors, then you'll need to extend the schema definition you're using when including this library. Again, I've made that as easy I could manage. You can either use `schema.xsd` as your shemaLocation in the Ui node, like this:
