@@ -46,12 +46,6 @@ function MyAddOnScrollingClipBoardBoxMixin:SetInterpolateScroll(canInterpolateSc
 	local scrollBox = self:GetScrollBox()
 	scrollBox:SetInterpolateScroll(canInterpolateScroll)
 end
---[[
-function MyAddOnScrollingClipBoardBoxMixin:OnShow()
-	local clipBoard = self:GetClipBoard()
-	clipBoard:TryApplyDefaultText()
-end
- ]]
 
 function MyAddOnScrollingClipBoardBoxMixin:OnMouseDown()
 	local clipBoard = self:GetClipBoard()

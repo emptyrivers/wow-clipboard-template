@@ -15,6 +15,7 @@
     intrinsic="true"
     mixin="MyAddOnClipBoardMixin"
     multiLine="true"
+    autoFocus="false"
   >
     <KeyValues>
       <KeyValue key="fontName" value="GameFontNormal" type="string" />

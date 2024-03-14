@@ -141,7 +141,7 @@ function MyAddOnClipBoardMixin:HighlightClipBoardText()
   if not self:IsMultiLine() then
     self:HighlightText()
   else
-    self:HighlightText(1, #self.clipBoardText - 1)
+    self:HighlightText(1, #self:GetText() - 1)
   end
 end
 
